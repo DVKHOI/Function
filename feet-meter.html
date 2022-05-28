@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+        <p>Type a value in the Feet filed to convert the value a Meter:</p>
+        <input type="text" id="inputFeet" placeholder="Feet" oninput="convertMeter(this.value)" onchange="convertMeter(this.value)">       
+    </p>
+    <p>Celcius: <span id="outputMeter"></span></p>
+    <hr>
+        <p>Type a value in the Meter filed to convert the value a Feet:</p>
+        <input type="text" id="inputMeter" placeholder="Feet" oninput="convertFeet(this.value)" onchange="convertFeet(this.value)">       
+    </p>
+    <p>Celcius: <span id="outputFeet"></span></p>
+</body>
+<script>
+    function convertMeter(foot){
+        foot = parseFloat(foot)
+        document.getElementById("outputMeter").innerHTML = foot * 0.305
+    }
+    function convertFeet(meter){
+        meter = parseFloat(meter)
+        document.getElementById("outputFeet").innerHTML = (meter * 3.279).toFixed(3)
+    }
+</script>
+</html>
