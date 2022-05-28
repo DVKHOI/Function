@@ -42,5 +42,39 @@
       data += "</table>";
       document.getElementById("data").innerHTML = data;
     }
+
+    function deleteProduct(index) {
+      if (confirm("Are you sure?")) {
+        products.splice(index, 1);
+      }
+      render();
+    }
+
+    let editIndex;
+    function editProduct(index) {
+      editIndex = index;
+      document.getElementById("product").value = products[index];
+      document.getElementById("add").value = "Edit";
+      document
+        .getElementById("add")
+        .setAttribute("onclick", "changeValueProduct()");
+    }
+
+    function changeValueProduct() {
+      let updateProduct = document.getElementById("product").value;
+      products[editIndex] = updateProduct;
+      document.getElementById("add").value = "Add";
+      document.getElementById("add").setAttribute("onclick", "addProduct()");
+      document.getElementById("product").value = "";
+      render();
+    }
+
+    function addProduct() {
+      let createProduct = document.getElementById("product").value;
+      products.push(createProduct);
+      document.getElementById("product").value = "";
+      render();
+    }
+    render();
   </script>
 </html>
