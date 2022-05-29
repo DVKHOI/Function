@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // function bai1() {
+    //   let num1 = +prompt("Nhập vào số thứ nhất: ");
+    //   let num2 = +prompt("Nhập vào số thứ hai: ");
+    //   if (num1 > num2) {
+    //     alert("Số thứ nhất lớn hơn số thứ 2");
+    //   } else {
+    //     let sum = num1 + num2;
+    //     alert("Tổng của 2 số bạn vừa nhập là: " + sum);
+    //   }
+    // }
+    // // bai1();
+    // -------------------------------------------------------------------------------------------------------------
+    // function bai2(string) {
+    //   let arr1 = [
+    //     "Polaris",
+    //     "Aldebaran",
+    //     "Deneb",
+    //     "Vega",
+    //     "Altair",
+    //     "Dubhe",
+    //     "Regulus",
+    //   ];
+    //   let arr2 = [
+    //     "Ursa Minor",
+    //     "Tarurus",
+    //     "Cygnus",
+    //     "Lyra",
+    //     "Aquila",
+    //     "Ursa Major",
+    //     "Leo",
+    //   ];
+    //   let index;
+    //   for (let i = 0; i < arr1.length; i++) {
+    //     if (arr1[i] == string) {
+    //       index = i;
+    //     }
+    //   }
+    //   return typeof string === "undefined"
+    //     ? " Không có ngôi sao phù hợp"
+    //     : arr2[index];
+    // }
+    // let string = prompt("Nhập ngôi sao: ");
+    // document.write(bai2(string));
+    // -------------------------------------------------------------------------------------------------------------
+    // function bai3() {
+    //   let number = +prompt("Nhập vào số bất kỳ: ");
+    //   alert("Bình phương của " + number + " là: " + Math.pow(number, 2));
+    // }
+    // // bai3();
+    // function dienTichAndChuViHinhTron(R) {
+    //   let S = Math.pow(R, 2) * Math.PI;
+    //   document.write("Diện tích hình tròn là: " + S);
+    //   let C = R * 2 * Math.PI;
+    //   document.write("Chu vi hình tròn là: " + C);
+    // }
+    // -------------------------------------------------------------------------------------------------------------
+    // function bai4() {
+    //   let R = +prompt("Nhập bán kính hình tròn");
+    //   dienTichAndChuViHinhTron(R);
+    // }
+    // // bai4();
+    // -------------------------------------------------------------------------------------------------------------
+    // function tinhGiaiThua(number) {
+    //   let giaithua = 1;
+    //   if (number == 0) {
+    //     giaithua = 1;
+    //   }
+    //   for (let i = 1; i <= number; i++) {
+    //     giaithua *= i;
+    //   }
+    //   return giaithua;
+    // }
+    // function bai5() {
+    //   let number = +prompt("Nhập số: ");
+    //   let giaiThua = tinhGiaiThua(number);
+    //   document.write("Giai thừa của " + number + " là: " + giaiThua);
+    // }
+    // // bai5();
+    // -------------------------------------------------------------------------------------------------------------
+    // function bai6() {
+    //   let number = prompt("Nhập vào ký tự:");
+    //   if (!isNaN(number)) {
+    //     console.log("true");
+    //   } else {
+    //     console.log("false");
+    //   }
+    // }
+    // bai6();
+    // -------------------------------------------------------------------------------------------------------------
+    // function timMin(num1, num2, num3) {
+    //   let min = num1;
+    //   if (num2 < min && num3 > min) {
+    //     min = num2;
+    //   } else if (num2 > min && num3 < min) {
+    //     min = num3;
+    //   }
+    //   return min;
+    // }
+    // function bai7() {
+    //   let number1 = +prompt("Nhập số thứ nhát: ");
+    //   let number2 = +prompt("Nhập số: ");
+    //   let number3 = +prompt("Nhập số: ");
+
+    //   let min = timMin(number1, number2, number3);
+    //   document.write("Số nhỏ nhất là: " + min);
+    // }
+    // // bai7();
+    // -------------------------------------------------------------------------------------------------------------
+    // function isInterge(number) {
+    //   return number > 0 && number % 1 == 0;
+    // }
+    // function bai8() {
+    //   let number = +prompt("Nhập vào 1 số bất kỳ:");
+    //   if (isInterge(number)) {
+    //     console.log("true");
+    //   } else {
+    //     console.log("false");
+    //   }
+    // }
+    // bai8();
+    // -------------------------------------------------------------------------------------------------------------
+    // function swap(arr) {
+    //   for (let i = 0; i < arr.length / 2; i++) {
+    //     let item = arr[i];
+    //     arr[i] = arr[arr.length - 1 - i];
+    //     arr[arr.length - 1 - i] = item;
+    //   }
+    //   return arr;
+    // }
+    // function bai9() {
+    //   let arr = [1, 9, 5, 6, 3, 12];
+    //   let n = swap(arr);
+    //   console.log(n);
+    // }
+    // bai9();
+    // function getArray() {
+    //   let string = prompt("Nhập vào 1 đoạn hội thoại có ý nghĩa:");
+    //   let arr = string.split("");
+    //   return arr;
+    // }
+    // function bai10() {
+    //   let arr = getArray();
+    //   let char = prompt("Nhập vào ký tự bất kỳ:");
+    //   let count = 0;
+    //   for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] == char) {
+    //       count += 1;
+    //     }
+    //   }
+    //   if (count > 0) {
+    //     console.log("Ký tự " + char + " xuất hiện " + count + " lần.");
+    //   } else {
+    //     console.log(-1);
+    //   }
+    // }
+    // bai10();
+  </script>
+</html>
